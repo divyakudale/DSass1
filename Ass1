@@ -1,0 +1,26 @@
+def lower_triangular(n):
+    for i in range(n):
+        print('* ' * (i + 1))
+
+def upper_triangular(n):
+    for i in range(n):
+        print('  ' * i + '* ' * (n - i))
+
+def pyramid(n):
+    for i in range(n):
+        print(' ' * (n - i - 1) + '* ' * (i + 1))
+
+# Example usage:
+size = 5
+
+#LowerTriangular
+print("Lower Triangular:")
+lower_triangular(size)
+
+#UpperTriangular
+print("\nUpper Triangular:")
+upper_triangular(size)
+
+#Pyramid
+print("\nPyramid:")
+pyramid(size)
