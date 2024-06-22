@@ -1,0 +1,20 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Load the dataset
+download_url = "https://raw.githubusercontent.com/fivethirtyeight/data/master/college-majors/recent-grads.csv"
+df = pd.read_csv(download_url)
+
+# Example: Create a histogram of median salaries
+df['Median'].plot(kind='hist', bins=20, edgecolor='black')
+plt.xlabel('Median Salary')
+plt.ylabel('Frequency')
+plt.title('Distribution of Median Salaries')
+plt.show()
+
+# Example: Scatter plot of Median Salary vs. Unemployment Rate
+df.plot(x='Median', y='Unemployment_rate', kind='scatter')
+plt.xlabel('Median Salary')
+plt.ylabel('Unemployment Rate')
+plt.title('Median Salary vs. Unemployment Rate')
+plt.show()
